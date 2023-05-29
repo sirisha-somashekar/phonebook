@@ -116,7 +116,6 @@ class Back_up:
         contacts2=[]
         phone={}
         backup=open("contacts.txt",'a')
-        backup2=open("contacts2.txt",'a')
         prompt2=self.entries[3] .get()
         phone2={self.entries[0].get():prompt2}
         for i in range(4):
@@ -124,7 +123,6 @@ class Back_up:
             phone[self.labels1[i]]=prompt
         contacts.append(phone)
         print(contacts,file=backup)
-        print(phone2,file=backup2)
         with open("cont.txt",'a') as contfile:
                         contfileWriter=csv.writer(contfile)
                         contfileWriter.writerow([self.entries[0].get(),self.entries[1].get(),
